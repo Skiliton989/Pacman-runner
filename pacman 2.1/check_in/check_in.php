@@ -116,6 +116,21 @@
 		";
 		$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
 		mysqli_free_result($result);
+		$query = "SELECT * FROM `users`
+		WHERE `Login` = '$login'";
+		if($result = mysqli_query($link,$query)){
+			while ($row = mysqli_fetch_assoc($result)) {
+				$id = $row['Id'];
+				
+			}
+		}
+		mysqli_free_result($result);
+		$date = date("Y-n-j");
+		$query ="INSERT `ratings`(`UserId`, `Date`, `Score`)
+				 VALUES ('$id','$date',0)
+		";
+		$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+		mysqli_free_result($result);
 		unset($_POST["input_data_btn"]);
 		header("location:../index.php");
 	}

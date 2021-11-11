@@ -6,13 +6,15 @@
 	</head>
 	<body>
 		<header class='center1'>
-			<div class="center2">
-				Pacman runner
-				<div class='right2'>
-					<form method="post">
-					<div class='right2'>
-						<input type="submit" name="exit" value="Выход">
-					</div>
+			<div class="left1">
+				Вы вошли как:	<?php echo $_SESSION['nickname']; ?>
+			</div>
+			<div class='right2'>
+				<form method="post">
+					<a href="/profile/profile.php">Профиль</a> | 
+					<a href="/ratings/ratings.php">Рейтинг</a>
+				
+					<input type="submit" name="exit" value="Выход">
 				</form>
 			</div>
 		</header>

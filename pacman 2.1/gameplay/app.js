@@ -1,8 +1,13 @@
+var score = 0
+
+function Score1(obj){
+		obj.score1.value = score
+	}
 document.addEventListener('DOMContentLoaded', () => {
 	const grid = document.querySelector('.grid')
 	const scoreDisplay = document.getElementById('score')
 	const width = 28
-	let score = 0
+	
 	let kol = 0
 	let kol2 = 0
 	let l = 0
@@ -117,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		powerPelletEaten()
 	}
 	document.addEventListener("keyup", movePacman)
+
 
 	function Score(){
 		kol++
