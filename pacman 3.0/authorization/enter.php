@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	session_start();
-	include_once('header_enter.php');
+	include_once('../header_not_autorization.php');
 
 ?>
 		<form method="post">
@@ -10,7 +10,8 @@
 					Введите пароль<input type="password" name="password" value="<?php echo $_POST['password']; ?>" required><br>
 					<input type="submit" name="enter_btn" value="Войти"><br>
 					<script src="//ulogin.ru/js/ulogin.js"></script>
-					<div id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name;providers=vkontakte,google,yandex,mailru,facebook;redirect_uri=http://pacman/authorization/enter.php;mobilebuttons=0;"></div>
+					<div id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name;providers=vkontakte,google,yandex,mailru,facebook;redirect_uri=http://pacman/authorization/enter.php;mobilebuttons=0;"></div><br>
+					<a href='../check_in/check_in.php'>Зарегистрироваться</a>
 					<?php
 						include_once('../connect.php');
 						if (!empty($_POST['enter_btn'])){

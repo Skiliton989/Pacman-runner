@@ -14,7 +14,7 @@ session_start();
 <body>
 	<form method="post" name='form1'>
 		<div class="grid"></div>
-		<div>Score:<div id="score">0</div></div>
+		<div>Score:<span id="score">0</span></div>
 		<input type="text" name="score1" id='score1' value="0" style="display: none;">
 		<input type="submit" name="start" id='start' value="Старт (рестарт)" onclick='Score1(form1)'>
 	</form>
@@ -34,7 +34,7 @@ session_start();
 		}
 		$query1 = "SELECT * FROM `ratings`
 		WHERE `Id` = '$id'";
-		if($result = mysqli_query($link,$query)){
+		if($result = mysqli_query($link,$query1)){
 			while ($row = mysqli_fetch_assoc($result)) {
 				if ($score > $row['Score']){
 					$query2 = "UPDATE `ratings`

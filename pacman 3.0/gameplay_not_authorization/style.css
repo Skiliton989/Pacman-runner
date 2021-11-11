@@ -1,0 +1,50 @@
+ .fog-of-war{
+	background-color: grey;
+	box-sizing: border-box;
+}
+ .grid{
+	display: flex;
+	flex-wrap: wrap;
+	width: 560px;
+	height: 560px;
+	border: solid black;
+}
+.grid div{
+	width: 20px;
+	height: 20px;
+}
+
+.wall{
+	background-color: blue;
+}
+
+
+
+.power-pellet{
+	background: url("Images/power-pellet.png");
+}
+
+.Blinky{
+	background: url("Images/blinky-right.png");
+}
+
+.Pinky{
+	background: url("Images/pinky-right.png");
+}
+
+.Inky{
+	background: url("Images/inky-right.png");
+}
+
+.Clyde{
+	background: url("Images/clyde-right.png");
+}
+
+.scared-ghost{
+	background: url("Images/scared-ghost.png");
+}
+
+.pacman{
+	background: url("Images/pacman.png");
+	transform: rotate(180deg);
+}

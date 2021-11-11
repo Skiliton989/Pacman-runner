@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	ob_start();
-	include_once('header.php');
+	include_once('../personal_account_of_users/header.php');
 ?>
 		<div class = 'center2'>
 			<form method="post" name="form1">

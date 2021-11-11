@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	ob_start();
-	include_once('header_check_in.php');
+	include_once('../header_not_autorization.php');
 ?>
 		<form method="post">
 		<div class = 'center2'>
@@ -102,7 +102,8 @@
 						<script src="//ulogin.ru/js/ulogin.js"></script>
 						<br><div id="uLogin" data-ulogin="
 							display=panel;theme=classic;fields=first_name,last_name;providers=vkontakte,mailru,facebook,google,yandex;redirect_uri=http://pacman/check_in/check_in.php;mobilebuttons=0;
-						"></div>
+						"></div><br>
+						<a href='../authorization/enter.php'>Войти</a>
 <?php
 	include_once('../connect.php');
 	if (!empty($_POST['enter_btn'])){
